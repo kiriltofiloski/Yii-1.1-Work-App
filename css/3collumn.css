@@ -1,0 +1,75 @@
+.column {
+  padding-left: 15px;
+  padding-top: 10px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  min-height: 100%;
+  height: fit-content;
+  display: table-cell;
+}
+
+/* Left and right column */
+.column.side {
+  width: 20%;
+  background:#CCC8B3;
+}
+
+/* Middle column */
+.column.middle {
+  width: 60%;
+}
+
+.column-container{
+  display: table;
+  width: 100%;
+  min-height: 100%;
+  height: fit-content;
+}
+
+div#header{background-color:#F3F2ED;}
+div#header h2{height:80px;line-height:80px;margin:0;padding-left:10px;}
+div#footer{background:#BFBD93;}
+div#footer{margin:0;padding:5px 10px}
+div#footer{clear:left;width:100%}
+html,body { 
+  height:100%; 
+}
+
+.form{width:340px;
+  height:auto;
+  background:#e6e6e6;
+  border-radius:8px;
+  box-shadow:0 0 40px -10px #000;
+  margin:calc(50vh - 220px) auto;
+  padding:20px 30px;
+  max-width:calc(100vw - 40px);
+  box-sizing:border-box;
+  font-family:'Montserrat',sans-serif;
+  position:relative
+}
+
+input{
+  width:100%;
+  padding:10px;
+  box-sizing:border-box;
+  background:none;
+  outline:none;
+  resize:none;
+  border:0;
+  font-family:'Montserrat',sans-serif;
+  transition:all .3s;
+  border-bottom:2px solid #bebed2
+}
+input:focus{border-bottom:2px solid #78788c}
+.errorSummary, .errorMessage{
+  color: red;
+}
+button{float:right;padding:8px 12px;margin:8px 0 0;font-family:'Montserrat',sans-serif;border:2px solid #78788c;background:0;color:#5a5a6e;cursor:pointer;transition:all .3s}
+button:hover{background:#78788c;color:#fff}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
